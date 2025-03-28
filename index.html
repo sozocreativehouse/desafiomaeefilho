@@ -4,101 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio Mãe e Filho</title>
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: #fafafa;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            padding: 20px;
-            color: #555;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 800px;
-            text-align: center;
-        }
-
-        .card {
-            background: #fffffd;
-            border-radius: 24px;
-            padding: 50px 40px;
-            box-shadow: 8px 8px 16px rgba(210, 210, 210, 0.2),
-                -8px -8px 16px rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            transition: all 0.3s ease;
-        }
-
-        h1 {
-            font-weight: 300;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            color: #7a7a7a;
-            letter-spacing: 1px;
-        }
-
-        .subtitle {
-            font-weight: 300;
-            font-size: 1rem;
-            margin-top: 15px;
-            color: #9a9a9a;
-            letter-spacing: 3px;
-        }
-
-        .divider {
-            height: 1px;
-            width: 80px;
-            margin: 25px auto;
-            background: linear-gradient(to right, transparent, #e0e0e0, transparent);
-            border: none;
-        }
-
-        .tag {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 6px 18px;
-            background: #f0f0f0;
-            border-radius: 16px;
-            color: #888;
-            font-size: 0.8rem;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 400;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.6rem;
-            }
-
-            .subtitle {
-                font-size: 0.9rem;
-            }
-
-            .card {
-                padding: 40px 20px;
-                border-radius: 20px;
-            }
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title>Desafio Mãe e Filho - Conexão</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="./fiveicon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&family=Roboto:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="card">
-            <h1>DESAFIO MÃE E FILHO</h1>
-            <div class="divider"></div>
-            <p class="subtitle">PLATAFORMA EM PRODUÇÃO</p>
-            <div class="tag">EM BREVE</div>
-        </div>
+        <header>
+            <div class="header-content">
+                <h1>Desafio – 30 Dias de Conexão entre Mãe e Filho</h1>
+                <div id="tema-header"></div>
+            </div>
+        </header>
+        <main>
+            <section class="mensagem-section">
+                <div class="section-header">
+                    <i class="fas fa-comments icon"></i>
+                    <h2 class="section-title">Mensagem do Dia</h2>
+                </div>
+                <blockquote id="mensagem"></blockquote>
+            </section>
+            <section class="desafio-section">
+                <div class="section-header">
+                    <i class="fas fa-bullseye icon"></i>
+                    <h2 class="section-title">Desafio do Dia</h2>
+                </div>
+                <div class="desafio-content">
+                    <p id="desafio"></p>
+                </div>
+            </section>
+            <section class="post-photo-section">
+                <div class="post-photo-content">
+                    <p class="post-photo-text">
+                        Poste uma foto de você com seu filho praticando o desafio e marque a gente no Instagram!
+                    </p>
+                    <a href="https://www.instagram.com/sozocreativehouse?igsh=YzB6cnpyOHR5dmps" target="_blank"
+                        class="instagram-link">
+                        <i class="fab fa-instagram"></i>
+                        @sozocreativehouse
+                    </a>
+                </div>
+            </section>
+            <section class="experiencia-section">
+                <div class="section-header">
+                    <i class="fas fa-question-circle icon"></i>
+                    <h2 class="section-title">Conte sua Experiência</h2>
+                </div>
+                <form id="experienciaForm" action="https://formspree.io/f/mrbpaqqp" method="POST">
+                    <div id="experienciaContainer">
+                        <!-- A pergunta do dia será injetada aqui via JS -->
+                    </div>
+                    <input type="hidden" name="_next" value="obrigado.html">
+                    <button type="submit" class="submit-button">Enviar Resposta</button>
+                </form>
+            </section>
+        </main>
     </div>
+    <footer>
+        <div class="footer-content">
+            <a href="https://www.instagram.com/sozocreativehouse?igsh=YzB6cnpyOHR5dmps" target="_blank"
+                class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <p class="footer-motto">"Conectando corações a cada dia!"</p>
+            <p class="footer-credit">Sozo Creative House - Criatividade e Amor em Família</p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>
