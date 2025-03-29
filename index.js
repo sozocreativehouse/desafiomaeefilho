@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { id: 1, question: "Como você se sentiu ao iniciar o desafio de hoje? O que mais te tocou?" },
         { id: 2, question: "Qual momento do dia te surpreendeu e fortaleceu sua conexão?" },
         { id: 3, question: "Que sentimento profundo surgiu durante a atividade de hoje?" },
-        { id: 4, question: "Houve um aprendizado inesperado hoje? Descreva-o." },
+        { id: 4, question: "Houve algum aprendizado inesperado hoje? Descreva-o." },
         { id: 5, question: "De que maneira o desafio de hoje aproximou vocês ainda mais?" },
         { id: 6, question: "O que você descobriu sobre si mesmo(a) enquanto realizava a atividade de hoje?" },
         { id: 7, question: "Como a criatividade empregada hoje refletiu a conexão entre vocês?" },
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { id: 30, question: "Ao refletir sobre hoje, o que mais te enche de gratidão e por quê?" }
     ];
 
-    // Função para exibir o conteúdo (desafio e pergunta) do dia atual
+    // Função para exibir o conteúdo do desafio do dia atual
     function displayDay(index) {
         const headerTema = document.getElementById("tema-header");
         const mensagemElement = document.getElementById("mensagem");
@@ -51,48 +51,60 @@ document.addEventListener("DOMContentLoaded", function () {
         // Exibe a pergunta do dia
         displayQuestion(index);
 
-        // Atualiza o sessionStorage com o dia atual
-        sessionStorage.setItem("challengeData", JSON.stringify({ date: new Date().toLocaleDateString(), index: index }));
+        // Atualiza o armazenamento com a data atual e o índice corrente
+        sessionStorage.setItem("challengeData", JSON.stringify({
+            date: new Date().toLocaleDateString(),
+            index: index
+        }));
     }
 
-    // Função para exibir a pergunta no formulário de experiência
+    // Função para exibir a pergunta correspondente ao dia atual
     function displayQuestion(index) {
         const container = document.getElementById("experienciaContainer");
         const currentQuestion = questions[index] ? questions[index].question : "";
         container.innerHTML = `
-        <div class="experiencia-item">
-          <label for="pergunta_${index}">${currentQuestion}</label>
-          <textarea id="pergunta_${index}" name="resposta" required></textarea>
-          <input type="hidden" name="question" value="${currentQuestion}">
-        </div>
-      `;
+            <div class="experiencia-item">
+                <label for="pergunta_${index}">${currentQuestion}</label>
+                <textarea id="pergunta_${index}" name="resposta" required></textarea>
+                <input type="hidden" name="question" value="${currentQuestion}">
+            </div>
+        `;
     }
 
-    // Verifica no sessionStorage se já existe um dia salvo
+    // Recupera os dados armazenados para saber qual foi o último dia exibido
     const savedData = sessionStorage.getItem("challengeData");
     const today = new Date().toLocaleDateString();
+
     if (savedData) {
         try {
             const dataObj = JSON.parse(savedData);
             if (dataObj.date === today) {
+                // Se já foi exibido hoje, mantém o mesmo índice
                 currentIndex = dataObj.index;
+            } else {
+                // Se é um novo dia, incrementa o índice em 1 (de forma circular)
+                currentIndex = (dataObj.index + 1) % 30; // Considerando 30 dias no desafio
             }
         } catch (error) {
-            console.error('Erro ao fazer parsing do sessionStorage:', error);
+            console.error("Erro ao fazer parsing do sessionStorage:", error);
             currentIndex = 0;
         }
     } else {
-        // Se não houver dados salvos, inicia no dia 0
         currentIndex = 0;
         sessionStorage.setItem("challengeData", JSON.stringify({ date: today, index: 0 }));
     }
 
-    // Carrega o conteúdo do JSON dos desafios
+    // Carrega o conteúdo dos desafios do arquivo JSON
     fetch('index.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Erro ao carregar o arquivo JSON");
+            }
+            return response.json();
+        })
         .then(jsonData => {
             data = jsonData;
-            // "Achata" a estrutura (semanas/dias) em um array simples
+            // "Achata" a estrutura do JSON (semanas/dias) em um array simples
             data.semanas.forEach(semana => {
                 semana.dias.forEach(dia => {
                     flatDays.push({
@@ -103,19 +115,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                 });
             });
-            // Exibe o dia corrente
+            // Exibe o desafio do dia corrente
             displayDay(currentIndex);
         })
         .catch(err => {
             console.error("Erro ao carregar o arquivo JSON:", err);
         });
 
-    // Removidos os event listeners para os botões de navegação,
-    // pois o usuário acessará o próximo desafio somente no dia seguinte.
-
-    // Opcional: Ao enviar o formulário, você pode implementar uma lógica extra, se necessário.
+    // Event listener para o formulário (pode ser expandido conforme necessário)
     const experienciaForm = document.getElementById("experienciaForm");
     experienciaForm.addEventListener("submit", function (event) {
-        // Lógica adicional para marcar a pergunta do dia como respondida (se desejar)
+        // Aqui você pode adicionar lógica adicional se necessário
     });
 });
