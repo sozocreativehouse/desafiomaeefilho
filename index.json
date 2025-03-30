@@ -5,8 +5,8 @@
             "dias": [
                 {
                     "dia": 1,
-                    "mensagem": "Bem-vinda ao Desafio – 30 Dias de Conexão entre Mãe e Filho! Hoje, convidamos vocês para compartilhar o que mais amam fazer juntas.",
-                    "desafio": "Preparar um bolo juntas e decorar com um tema especial."
+                    "mensagem": "Bem-vindo(a) ao Desafio – 30 Dias de Conexão entre Mãe e Filho(a)! Hoje, convidamos vocês para compartilhar o que mais amam fazer juntos(as).",
+                    "desafio": "Preparar um bolo juntos(as) e decorar com um tema especial."
                 },
                 {
                     "dia": 2,
@@ -16,7 +16,7 @@
                 {
                     "dia": 3,
                     "mensagem": "Transforme a criatividade em palavras.",
-                    "desafio": "Inventar uma história juntas e gravar um áudio ou vídeo contando-a."
+                    "desafio": "Inventar uma história juntos(as) e gravar um áudio ou vídeo contando-a."
                 },
                 {
                     "dia": 4,
@@ -46,12 +46,12 @@
                 {
                     "dia": 8,
                     "mensagem": "Mexa-se e divirta-se!",
-                    "desafio": "Dançar juntas uma música animada."
+                    "desafio": "Dançar juntos(as) uma música animada."
                 },
                 {
                     "dia": 9,
                     "mensagem": "Expressar sentimentos fortalece os laços.",
-                    "desafio": "Criar um pote da gratidão e escrever bilhetinhos uma para a outra."
+                    "desafio": "Criar um pote da gratidão e escrever bilhetinhos um(a) para o outro(a)."
                 },
                 {
                     "dia": 10,
@@ -61,7 +61,7 @@
                 {
                     "dia": 11,
                     "mensagem": "Crie um cantinho especial para vocês.",
-                    "desafio": "Construir uma cabana com lençóis e passar um tempo juntas nela, lendo ou conversando."
+                    "desafio": "Construir uma cabana com lençóis e passar um tempo juntos(as) nela, lendo ou conversando."
                 },
                 {
                     "dia": 12,
@@ -76,7 +76,7 @@
                 {
                     "dia": 14,
                     "mensagem": "Compartilhar histórias aproxima corações.",
-                    "desafio": "Cada uma escolhe um livro curto para ler e comentar juntas."
+                    "desafio": "Cada um(a) escolhe um livro curto para ler e comentar juntos(as)."
                 }
             ]
         },
@@ -86,12 +86,12 @@
                 {
                     "dia": 15,
                     "mensagem": "Palavras fortalecem os laços.",
-                    "desafio": "Escrever cinco qualidades uma na outra e compartilhar."
+                    "desafio": "Escrever cinco qualidades um(a) no outro(a) e compartilhar."
                 },
                 {
                     "dia": 16,
-                    "mensagem": "Cante e celebre a vida juntas.",
-                    "desafio": "Escolher uma música para cantar juntas e gravar esse momento."
+                    "mensagem": "Cante e celebre a vida juntos(as).",
+                    "desafio": "Escolher uma música para cantar juntos(as) e gravar esse momento."
                 },
                 {
                     "dia": 17,
@@ -125,7 +125,7 @@
             "dias": [
                 {
                     "dia": 22,
-                    "mensagem": "Prepare uma surpresa especial uma para a outra.",
+                    "mensagem": "Prepare uma surpresa especial um(a) para o outro(a).",
                     "desafio": "Criar um presente surpresa com carinho."
                 },
                 {
@@ -136,7 +136,7 @@
                 {
                     "dia": 24,
                     "mensagem": "Comece o dia com muito afeto.",
-                    "desafio": "Preparar um café da manhã especial e servi-lo à outra."
+                    "desafio": "Preparar um café da manhã especial e servi-lo ao outro(a)."
                 },
                 {
                     "dia": 25,
@@ -145,12 +145,12 @@
                 },
                 {
                     "dia": 26,
-                    "mensagem": "Cuidar de algo juntas é aprendizado.",
+                    "mensagem": "Cuidar de algo juntos(as) é aprendizado.",
                     "desafio": "Plantar uma semente e acompanhar seu crescimento."
                 },
                 {
                     "dia": 27,
-                    "mensagem": "Sonhar juntas abre novos caminhos.",
+                    "mensagem": "Sonhar juntos(as) abre novos caminhos.",
                     "desafio": "Fazer uma lista de sonhos e planos para o futuro."
                 },
                 {
@@ -166,7 +166,7 @@
                 {
                     "dia": 30,
                     "mensagem": "Último dia: compartilhe o que essa jornada significou.",
-                    "desafio": "Comemorar juntas o fim do desafio com um momento especial à escolha."
+                    "desafio": "Comemorar juntos(as) o fim do desafio com um momento especial à escolha."
                 }
             ]
         }
