@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { id: 30, question: "Ao refletir sobre hoje, o que mais te enche de gratidão e por quê?" }
     ];
 
-    // Função para exibir o conteúdo do desafio do dia atual
+    // Função para exibir o conteúdo (mensagem, desafio e pergunta) do dia atual
     function displayDay(index) {
         const headerTema = document.getElementById("tema-header");
         const mensagemElement = document.getElementById("mensagem");
@@ -51,14 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
         // Exibe a pergunta do dia
         displayQuestion(index);
 
-        // Atualiza o armazenamento com a data atual e o índice corrente
-        sessionStorage.setItem("challengeData", JSON.stringify({
+        // Atualiza o localStorage com a data atual e o índice corrente
+        localStorage.setItem("challengeData", JSON.stringify({
             date: new Date().toLocaleDateString(),
             index: index
         }));
     }
 
-    // Função para exibir a pergunta correspondente ao dia atual
+    // Função para exibir a pergunta no formulário de experiência
     function displayQuestion(index) {
         const container = document.getElementById("experienciaContainer");
         const currentQuestion = questions[index] ? questions[index].question : "";
@@ -71,8 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     }
 
-    // Recupera os dados armazenados para saber qual foi o último dia exibido
-    const savedData = sessionStorage.getItem("challengeData");
+    // Recupera os dados salvos para saber qual foi o último dia exibido (usando localStorage)
+    const savedData = localStorage.getItem("challengeData");
     const today = new Date().toLocaleDateString();
 
     if (savedData) {
@@ -83,15 +83,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 currentIndex = dataObj.index;
             } else {
                 // Se é um novo dia, incrementa o índice em 1 (de forma circular)
-                currentIndex = (dataObj.index + 1) % 30; // Considerando 30 dias no desafio
+                currentIndex = (dataObj.index + 1) % 30; // 30 dias de desafio
             }
         } catch (error) {
-            console.error("Erro ao fazer parsing do sessionStorage:", error);
+            console.error("Erro ao fazer parsing do localStorage:", error);
             currentIndex = 0;
         }
     } else {
         currentIndex = 0;
-        sessionStorage.setItem("challengeData", JSON.stringify({ date: today, index: 0 }));
+        localStorage.setItem("challengeData", JSON.stringify({ date: today, index: 0 }));
     }
 
     // Carrega o conteúdo dos desafios do arquivo JSON
@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.json();
         })
         .then(jsonData => {
+            // O JSON possui estrutura de semanas com dias; vamos "achatar" essa estrutura
             data = jsonData;
-            // "Achata" a estrutura do JSON (semanas/dias) em um array simples
             data.semanas.forEach(semana => {
                 semana.dias.forEach(dia => {
                     flatDays.push({
@@ -115,16 +115,16 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                 });
             });
-            // Exibe o desafio do dia corrente
+            // Exibe o desafio do dia corrente conforme o índice calculado
             displayDay(currentIndex);
         })
         .catch(err => {
             console.error("Erro ao carregar o arquivo JSON:", err);
         });
 
-    // Event listener para o formulário (pode ser expandido conforme necessário)
+    // Event listener para o formulário de experiência (pode ser expandido conforme necessário)
     const experienciaForm = document.getElementById("experienciaForm");
     experienciaForm.addEventListener("submit", function (event) {
-        // Aqui você pode adicionar lógica adicional se necessário
+        // Lógica adicional para marcar a pergunta do dia como respondida pode ser adicionada aqui
     });
 });
