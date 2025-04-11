@@ -1,0 +1,174 @@
+{
+    "semanas": [
+        {
+            "nome": "Semana 1 - Culinária e Criatividade",
+            "dias": [
+                {
+                    "dia": 1,
+                    "mensagem": "Bem-vindo(a) ao Desafio – 30 Dias de Conexão entre Mãe e Filho(a)! Hoje, convidamos vocês para compartilhar o que mais amam fazer juntos(as).",
+                    "desafio": "Preparar um bolo juntos(as) e decorar com um tema especial."
+                },
+                {
+                    "dia": 2,
+                    "mensagem": "Hoje é dia de soltar a imaginação!",
+                    "desafio": "Criar um desenho a quatro mãos: uma começa, a outra finaliza."
+                },
+                {
+                    "dia": 3,
+                    "mensagem": "Transforme a criatividade em palavras.",
+                    "desafio": "Inventar uma história juntos(as) e gravar um áudio ou vídeo contando-a."
+                },
+                {
+                    "dia": 4,
+                    "mensagem": "Cozinhar é um ato de amor.",
+                    "desafio": "Preparar uma receita simples, como biscoitos ou panquecas."
+                },
+                {
+                    "dia": 5,
+                    "mensagem": "Hoje, vamos trabalhar com papel!",
+                    "desafio": "Fazer uma dobradura ou origami e criar um personagem com ele."
+                },
+                {
+                    "dia": 6,
+                    "mensagem": "É dia de arte!",
+                    "desafio": "Criar uma pintura usando as mãos ou esponjas."
+                },
+                {
+                    "dia": 7,
+                    "mensagem": "Primeira semana concluída: que tal registrar as melhores memórias?",
+                    "desafio": "Montar um diário da jornada, desenhando ou escrevendo os momentos mais marcantes."
+                }
+            ]
+        },
+        {
+            "nome": "Semana 2 - Movimento e Emoções",
+            "dias": [
+                {
+                    "dia": 8,
+                    "mensagem": "Mexa-se e divirta-se!",
+                    "desafio": "Dançar juntos(as) uma música animada."
+                },
+                {
+                    "dia": 9,
+                    "mensagem": "Expressar sentimentos fortalece os laços.",
+                    "desafio": "Criar um pote da gratidão e escrever bilhetinhos um(a) para o outro(a)."
+                },
+                {
+                    "dia": 10,
+                    "mensagem": "Hoje é dia de raciocínio e paciência.",
+                    "desafio": "Fazer um quebra-cabeça caseiro com uma foto de família."
+                },
+                {
+                    "dia": 11,
+                    "mensagem": "Crie um cantinho especial para vocês.",
+                    "desafio": "Construir uma cabana com lençóis e passar um tempo juntos(as) nela, lendo ou conversando."
+                },
+                {
+                    "dia": 12,
+                    "mensagem": "Mova-se com energia!",
+                    "desafio": "Criar um circuito com desafios físicos simples, como pular ou equilibrar."
+                },
+                {
+                    "dia": 13,
+                    "mensagem": "A natureza inspira a vida.",
+                    "desafio": "Fazer uma caminhada observando o ambiente ao redor."
+                },
+                {
+                    "dia": 14,
+                    "mensagem": "Compartilhar histórias aproxima corações.",
+                    "desafio": "Cada um(a) escolhe um livro curto para ler e comentar juntos(as)."
+                }
+            ]
+        },
+        {
+            "nome": "Semana 3 - Reflexão e Carinho",
+            "dias": [
+                {
+                    "dia": 15,
+                    "mensagem": "Palavras fortalecem os laços.",
+                    "desafio": "Escrever cinco qualidades um(a) no outro(a) e compartilhar."
+                },
+                {
+                    "dia": 16,
+                    "mensagem": "Cante e celebre a vida juntos(as).",
+                    "desafio": "Escolher uma música para cantar juntos(as) e gravar esse momento."
+                },
+                {
+                    "dia": 17,
+                    "mensagem": "O riso é remédio para a alma.",
+                    "desafio": "Fazer uma sessão de fotos espontâneas e engraçadas."
+                },
+                {
+                    "dia": 18,
+                    "mensagem": "Escreva algo para o futuro.",
+                    "desafio": "Redigir uma carta para ser aberta futuramente, relembrando um momento especial."
+                },
+                {
+                    "dia": 19,
+                    "mensagem": "Um gesto de carinho transforma o dia.",
+                    "desafio": "Criar um cartão com uma mensagem de amor e carinho."
+                },
+                {
+                    "dia": 20,
+                    "mensagem": "Espalhe amor também para os outros.",
+                    "desafio": "Separar roupas ou brinquedos para doar."
+                },
+                {
+                    "dia": 21,
+                    "mensagem": "Histórias de infância inspiram.",
+                    "desafio": "Contar uma história marcante da infância da mãe e criar um desenho sobre ela."
+                }
+            ]
+        },
+        {
+            "nome": "Semana 4 - Surpresas e Memórias",
+            "dias": [
+                {
+                    "dia": 22,
+                    "mensagem": "Prepare uma surpresa especial um(a) para o outro(a).",
+                    "desafio": "Criar um presente surpresa com carinho."
+                },
+                {
+                    "dia": 23,
+                    "mensagem": "Guarde as lembranças mais queridas.",
+                    "desafio": "Montar um mural com fotos e desenhos que representem os melhores momentos."
+                },
+                {
+                    "dia": 24,
+                    "mensagem": "Comece o dia com muito afeto.",
+                    "desafio": "Preparar um café da manhã especial e servi-lo ao outro(a)."
+                },
+                {
+                    "dia": 25,
+                    "mensagem": "Use a imaginação para criar algo único.",
+                    "desafio": "Elaborar uma pequena encenação ou teatro baseada em um episódio do dia."
+                },
+                {
+                    "dia": 26,
+                    "mensagem": "Cuidar de algo juntos(as) é aprendizado.",
+                    "desafio": "Plantar uma semente e acompanhar seu crescimento."
+                },
+                {
+                    "dia": 27,
+                    "mensagem": "Sonhar juntos(as) abre novos caminhos.",
+                    "desafio": "Fazer uma lista de sonhos e planos para o futuro."
+                },
+                {
+                    "dia": 28,
+                    "mensagem": "Registre a jornada de forma digital.",
+                    "desafio": "Gravar um vídeo contando como foi essa experiência."
+                },
+                {
+                    "dia": 29,
+                    "mensagem": "Reúna as melhores lembranças dos dias vividos.",
+                    "desafio": "Criar um álbum com fotos e anotações dos 30 dias."
+                },
+                {
+                    "dia": 30,
+                    "mensagem": "Último dia: compartilhe o que essa jornada significou.",
+                    "desafio": "Comemorar juntos(as) o fim do desafio com um momento especial à escolha."
+                }
+            ]
+        }
+    ]
+}
